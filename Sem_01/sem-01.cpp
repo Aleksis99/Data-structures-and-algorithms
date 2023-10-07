@@ -28,7 +28,7 @@ size_t fibLinear(size_t n)
 }
 
 // WC = AC = BC = O(n)
-int sum(int* arr, size_t n)
+int sum(const int* arr, size_t n)
 {
 	int result = 0;
 
@@ -41,7 +41,7 @@ int sum(int* arr, size_t n)
 }
 
 // BC = WA = AC = O(n)
-size_t findMinIndex(int* arr, size_t start, size_t n)
+size_t findMinIndex(const int* arr, size_t start, size_t n)
 {
 	size_t minIndex = start;
 
@@ -66,7 +66,7 @@ void selectionSort(int* arr, size_t n)
 	}
 }
 
-void printArr(int* arr, size_t n)
+void printArr(const int* arr, size_t n)
 {
 	for (size_t i = 0; i < n; i++)
 	{
@@ -77,7 +77,7 @@ void printArr(int* arr, size_t n)
 }
 
 // BC = O(1) WC = AC = O(Log(n))
-size_t binSearch(int* arr, size_t n, int key)
+size_t binSearch(const int* arr, size_t n, int key)
 {
 	size_t l = 0;
 	size_t r = n - 1;
