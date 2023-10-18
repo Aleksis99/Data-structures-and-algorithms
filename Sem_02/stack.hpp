@@ -24,7 +24,7 @@ public:
 	~Stack();
 
 	void pop();
-	T top() const;
+	const T& top() const;
 	void push(const T& data);
 	bool empty() const;
 	size_t getSize() const;
@@ -124,7 +124,7 @@ void Stack<T>::push(const T& data)
 }
 
 template<class T>
-T Stack<T>::top() const
+const T& Stack<T>::top() const
 {
 	if (empty())
 		throw "Stack empty";
