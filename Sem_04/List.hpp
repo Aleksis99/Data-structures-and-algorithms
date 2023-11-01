@@ -50,12 +50,12 @@ public:
 
 		if (rhs.size > 0)
 		{
-			lhs->tail->next = rhs->head;
-			lhs->tail = rhs->tail;
+			lhs.tail->next = rhs.head;
+			lhs.tail = rhs.tail;
 			lhs.size += rhs.size;
 
-			rhs->head = nullptr;
-			rhs->tail = nullptr;
+			rhs.head = nullptr;
+			rhs.tail = nullptr;
 			rhs.size = 0;
 		}
 
