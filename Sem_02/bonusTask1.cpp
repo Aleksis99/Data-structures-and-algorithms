@@ -5,6 +5,7 @@ void sortStack(std::stack<int> &first)
 {
     std::stack<int> second;
     int currentElement = 0;
+    
     while (!first.empty())
     {
         currentElement = first.top();
@@ -15,6 +16,7 @@ void sortStack(std::stack<int> &first)
             first.push(second.top());
             second.pop();
         }
+        
         second.push(currentElement);
     }
 
@@ -32,6 +34,7 @@ void stackPrint(std::stack<int> st)
         std::cout << st.top() << " ";
         st.pop();
     }
+    
     std::cout << std::endl;
 }
 
