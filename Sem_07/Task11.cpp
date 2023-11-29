@@ -21,23 +21,10 @@ void mirror(Node<T>*& root)
 {
 	if (!root)
 		return;
-
-	if (root->left && root->right)
-	{
-		Node<T>* temp = root->left;
-		root->left = root->right;
-		root->right = temp;
-	}
-	else if (root->left && !root->right)
-	{
-		root->right = root->left;
-		root->left = nullptr;
-	}
-	else if (root->right && !root->left)
-	{
-		root->left = root->right;
-		root->right = nullptr;
-	}
+	
+	Node<T>* temp = root->left;
+	root->left = root->right;
+	root->right = temp;
 
 	mirror(root->left);
 	mirror(root->right);
