@@ -21,9 +21,6 @@ size_t getElementsCount(Node<T>* root)
 	if (!root)
 		return 0;
 
-	if (!root->left && !root->right)
-		return 1;
-
 	return 1 + (getElementsCount(root->left) + getElementsCount(root->right));
 }
 
