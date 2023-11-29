@@ -16,7 +16,7 @@ struct Node
 	{}
 };
 
-void fillStrings(Node<char>* root, vector<string>& words, string currentWord)
+void fillStrings(Node<char>* root, vector<string>& words, string& currentWord)
 {
 	if (!root)
 		return;
@@ -26,11 +26,13 @@ void fillStrings(Node<char>* root, vector<string>& words, string currentWord)
 	if (!root->left && !root->right)
 	{
 		words.push_back(currentWord);
+		currentWord.pop_back();
 		return;
 	}
 
 	fillStrings(root->left, words, currentWord);
 	fillStrings(root->right, words, currentWord);
+	currentWord.pop_back();
 }
 vector<string> getWords(Node<char>* root)
 {
