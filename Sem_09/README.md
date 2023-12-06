@@ -361,7 +361,8 @@ class AVL<T>::Node* AVL<T>::remove(Node* root, const T& data)
 
 		T operator++()
 		{
-			return next();
+			next();
+			return s.top()->data;
 		}
 
 		T operator++(int)
