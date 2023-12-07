@@ -181,11 +181,11 @@ class AVL<T>::Node* AVL<T>::LRRotation(Node* root) const
 
 ```cpp
 /*
-A				A			B
+A			A				B
 
-	C	->	B		->	A		C
+	C	->		B	->	A		C
 
-B				C
+B					C
 */
 template<class T>
 class AVL<T>::Node* AVL<T>::RLRotation(Node* root) const
