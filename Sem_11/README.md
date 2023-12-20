@@ -130,19 +130,15 @@ n2->right = n5;
     C       C       
 */
 
-int main()
-{
-    Node n1({ 1, 'a' });
-    Node n11({ 1, 'b' });
-    Node n12({ 1, 'b' });
-    Node n111({ 1, 'c' });
-    Node n112({ 1, 'c' });
-    Node n121({ 1, 'c' });
-    Node n122({ 1, 'c' });
-    n1.children.push_back(&n11);
-    n1.children.push_back(&n12);
-    n11.children.push_back(&n111);
-    n12.children.push_back(&n121);
-}
-
+Node n1({ 1, 'a' });
+Node n11({ 1, 'b' });
+Node n12({ 1, 'b' });
+Node n111({ 1, 'c' });
+Node n112({ 1, 'c' });
+Node n121({ 1, 'c' });
+Node n122({ 1, 'c' });
+n1.children.push_back(&n11);
+n1.children.push_back(&n12);
+n11.children.push_back(&n111);
+n12.children.push_back(&n121);
 ```
