@@ -257,7 +257,7 @@ std::vector<std::list<int>> readGrapth(int vectices, int edges, bool isDirected 
 ```
 
 ## Задача 1 
-Имплеметирайте DFS рескурсивно и със стек.
+Имплеметирайте DFS.
 
 ## Задача 2 
 Намерете броя на свързаните компоненти в неориентиран граф.
